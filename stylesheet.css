@@ -17,7 +17,7 @@ body{
     padding:2px;
     flex-basis:100%;
     text-align: center;
-    border:1px solid;
+    /* border:1px solid; */
 }
 
 h1{
@@ -27,22 +27,45 @@ h1{
 }
 
 .title-block{
-    border-radius:5px; 
+    display:flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 280px;
+    height: 150px;
     margin:16px;
-    background-color:RGB(255, 83, 73);
-    width:390px;
-    height:200px;
-    justify-content:center;
     border: 1px solid;
+    justify-content:center;
+    background-color:RGB(255, 83, 73);
+    border-radius:5px;
+}
+#counrties{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+#meal{
+    width:100%;
+    height:100%;
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding:8px 8px;
 }
 
 .meal-card img{
-    width:100%;
-    height:80%;
+    width: 280px;
+    height: 150px;
+    padding:8px;
+   
 }
-.page-layout{
-
+.meal-name{
+    align-items: center;
+    justify-content:space-evenly;
+    
 }
+/* .page-layout{
+   
+} */
 /* Styles for the meal wrapper */
 .meal-wrapper {
     display: flex;
