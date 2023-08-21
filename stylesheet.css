@@ -1,0 +1,84 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Encode+Sans&family=Montserrat:wght@300;500&display=swap');
+
+
+*{
+    /* margin:0;
+    padding:0;
+    box-sizing: border-box; */
+    font-family: 'Montserrat',sans-serif ;
+}
+
+body{
+    justify-content: center;
+}
+.meal-wrapper{
+    margin: 0 auto;
+    padding:2px;
+    flex-basis:100%;
+    text-align: center;
+    border:1px solid;
+}
+
+h1{
+     font-size:2.5rem;
+     text-align:left;
+     line-height: 1.2;   
+}
+
+.title-block{
+    border-radius:5px; 
+    margin:16px;
+    background-color:RGB(255, 83, 73);
+    width:390px;
+    height:200px;
+    justify-content:center;
+    border: 1px solid;
+}
+
+.meal-card img{
+    width:100%;
+    height:80%;
+}
+.page-layout{
+
+}
+/* Styles for the meal wrapper */
+.meal-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+/* Styles for the select country section */
+.select-country {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Styles for the card container */
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 80%;
+    /* max-width: 600px; */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+/* Styles for the countries section */
+#countries {
+    margin-bottom: 15px;
+}
+
+/* Styles for the meal section */
+#meal {
+    margin-bottom: 15px;
+}
+
+/* Styles for the recipe section */
+#recipe {
+    /* Add your styles for the recipe section here */
+}
