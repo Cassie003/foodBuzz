@@ -10,7 +10,8 @@
 }
 
 body{
-    justify-content: center;
+    justify-content:center;
+    background-color:beige;
 }
 .meal-wrapper{
     margin: 0 auto;
@@ -22,14 +23,11 @@ body{
     margin:20px;
     /* text-align:center; */
 }
-
-
 h1{
      font-size:2.5rem;
      text-align:left;
      line-height: 1.2;   
 }
-
 .title-block{
     display:flex;
     flex-direction: column;
@@ -39,9 +37,11 @@ h1{
     margin:16px;
     border: 1px solid;
     justify-content:center;
-    background-color:RGB(255, 83, 73);
+    background-image:url(food.jpg);
+    color:burlywood;
     border-radius:5px;
-    align-items:center;
+    font-size:18px ;
+    cursor:pointer;
 }
 #counrties{
     display:flex;
@@ -70,15 +70,20 @@ padding:25px 20px 20px;
 display:flex;
 flex-direction:column;
 }
-.meal-name{
-    align-items: center;
-    justify-content:space-evenly; 
+.meal-name{ 
+    padding:16px;
+    font-family: 'Montserrat',sans-serif ;
+    font-size: 18px;
 }
 h3{
     display: inline-block;
     color: #1c1c1c;
 }
+#recipe{
+    display:flex;
+    flex-basis:50%;
 
+}
 
 /* Styles for the select country section */
 .select-country {
@@ -99,10 +104,7 @@ h3{
 .pageLayout{
     border: 1px solid;
 }
-#recipe{
-    display: flex;
-    flex-basis: 50%;
-}
+
 #recipe img{
     width:270px;
     height:270px;
