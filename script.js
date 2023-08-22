@@ -42,11 +42,15 @@ const popolateCountries = ()  =>{
                         arrowBack.addEventListener('click',function(e){
                             counrtiesDisplay.style.display = 'flex';
                             mealDisplay .style.display = 'none';
-                           //mealDisplay.style.display = 'none';
-                           //mealCard.style.display = 'none';
-                           //mealInstructions.style.display = 'none';
-                           //pageLayout.style.display = 'none';
                            recipeDisplay.style.display = 'none';
+
+                           counrtiesDisplay.addEventListener('click', function(){
+                            mealDisplay.style.display = 'flex';
+                           })
+
+                           mealDisplay.addEventListener('click', function(){
+                            recipeDisplay.style.display = 'flex';
+                           });
                         });
 
                         mealCard.addEventListener('click', function(e) {
@@ -108,7 +112,7 @@ const popolateCountries = ()  =>{
                                         <h1>${item.strMeal}</h1>
                                         <h2>Ingredients</h2>
                                         ${ingredientObj}
-                                        <h2>Measurement</h2>
+                                        <h2>Measurements</h2>
                                         ${ measureObj}
                                         <h2>Instructions</h2>
                                         ${ instructionObj}
