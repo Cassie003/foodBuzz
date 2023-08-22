@@ -16,9 +16,13 @@ body{
     margin: 0 auto;
     padding:2px;
     flex-basis:100%;
-    text-align: center;
-    /* border:1px solid; */
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin:20px;
+    /* text-align:center; */
 }
+
 
 h1{
      font-size:2.5rem;
@@ -37,6 +41,7 @@ h1{
     justify-content:center;
     background-color:RGB(255, 83, 73);
     border-radius:5px;
+    align-items:center;
 }
 #counrties{
     display:flex;
@@ -52,27 +57,28 @@ h1{
     padding:8px 8px;
 }
 
-.meal-card img{
+.meal-card-info img{
     width: 280px;
     height: 150px;
     padding:8px;
    
 }
+.meal-card-info{
+position:relative;
+text-align:left;
+padding:25px 20px 20px;
+display:flex;
+flex-direction:column;
+}
 .meal-name{
     align-items: center;
-    justify-content:space-evenly;
-    
+    justify-content:space-evenly; 
 }
-/* .page-layout{
-   
-} */
-/* Styles for the meal wrapper */
-.meal-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px;
+h3{
+    display: inline-block;
+    color: #1c1c1c;
 }
+
 
 /* Styles for the select country section */
 .select-country {
@@ -90,18 +96,24 @@ h1{
     border-radius: 5px;
     background-color: #fff;
 }
-
-/* Styles for the countries section */
-#countries {
-    margin-bottom: 15px;
+.pageLayout{
+    border: 1px solid;
+}
+#recipe{
+    display: flex;
+    flex-basis: 50%;
+}
+#recipe img{
+    width:270px;
+    height:270px;
+}
+.instructions{
+    /* border:1px solid; */
+    font-size:medium;
 }
 
-/* Styles for the meal section */
-#meal {
-    margin-bottom: 15px;
+.material-symbols-outlined{
+    cursor:pointer;
 }
 
-/* Styles for the recipe section */
-#recipe {
-    /* Add your styles for the recipe section here */
-}
+

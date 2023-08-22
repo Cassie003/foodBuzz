@@ -1,6 +1,7 @@
 const counrtiesDisplay = document.getElementById('counrties');
 const  mealDisplay = document.getElementById('meal');
  const recipeDisplay = document.getElementById('recipe');
+ const arrowBack =  document.getElementById('arrow-back');
 
 
 
@@ -29,11 +30,24 @@ const popolateCountries = ()  =>{
                     meals.meals.forEach((item) =>{
                         const mealCard = document.createElement('div');
                         mealObj = `<div class = "meal-card"> 
-                                    <img src= '${item.strMealThumb}' /> 
-                                    <div class="meal-name">${item.strMeal}</div>
+                        <div class = "meal-card-info">
+                            <img src= '${item.strMealThumb}' /> 
+                            <div class="meal-name">${item.strMeal}</div>
+                        </div>
+                                    
                                 </div>`;
 
                         mealCard.innerHTML = mealObj;
+
+                        arrowBack.addEventListener('click',function(e){
+                            counrtiesDisplay.style.display = 'flex';
+                            mealDisplay .style.display = 'none';
+                           //mealDisplay.style.display = 'none';
+                           //mealCard.style.display = 'none';
+                           //mealInstructions.style.display = 'none';
+                           //pageLayout.style.display = 'none';
+                           recipeDisplay.style.display = 'none';
+                        });
 
                         mealCard.addEventListener('click', function(e) {
                             const fetchRecipe = fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${item.idMeal}`);
@@ -43,7 +57,10 @@ const popolateCountries = ()  =>{
                             .then((response) => {
                                 console.log(response);
                                 
-                                //
+                                arrowBack.addEventListener('click',function(e){
+                                    mealCard.style.display = 'flex'; 
+
+                                });
                                 let ingredientArr = [];
                                 let measureArr = [];
                                 response.meals.forEach((item) => {
@@ -57,6 +74,8 @@ const popolateCountries = ()  =>{
                                         }
 
                                     }
+
+                                    
 
                                     const mealInstructions = item.strInstructions.split('. ');
 
@@ -91,7 +110,7 @@ const popolateCountries = ()  =>{
                                         ${ingredientObj}
                                         <h2>Measurement</h2>
                                         ${ measureObj}
-                                        <h2>instructions</h2>
+                                        <h2>Instructions</h2>
                                         ${ instructionObj}
 
                                     </div>
