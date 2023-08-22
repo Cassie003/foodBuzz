@@ -40,17 +40,26 @@ const popolateCountries = ()  =>{
                         mealCard.innerHTML = mealObj;
 
                         arrowBack.addEventListener('click',function(e){
-                            counrtiesDisplay.style.display = 'flex';
-                            mealDisplay .style.display = 'none';
-                           recipeDisplay.style.display = 'none';
+                            mealDisplay.style.display = 'flex';
+                            recipeDisplay.style.display = 'none';
 
                            counrtiesDisplay.addEventListener('click', function(){
                             mealDisplay.style.display = 'flex';
-                           })
-
-                           mealDisplay.addEventListener('click', function(){
-                            recipeDisplay.style.display = 'flex';
                            });
+
+                           
+                        });
+                        arrowBack.addEventListener('click', function(){
+                            counrtiesDisplay.style.display = 'flex';
+                            mealDisplay.style.display = 'none';
+
+                            mealDisplay.addEventListener('click', function(){
+                                    recipeDisplay.style.display = 'flex';
+                            });
+
+                            //  recipeDisplay.style.display = 'none';
+
+                            // recipeDisplay.style.display = 'flex';
                         });
 
                         mealCard.addEventListener('click', function(e) {
