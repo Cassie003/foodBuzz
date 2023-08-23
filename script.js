@@ -49,18 +49,18 @@ const popolateCountries = ()  =>{
 
                            
                         });
+
                         arrowBack.addEventListener('click', function(){
                             counrtiesDisplay.style.display = 'flex';
-                            mealDisplay.style.display = 'none';
+                             mealDisplay.style.display = 'none';
 
                             mealDisplay.addEventListener('click', function(){
                                     recipeDisplay.style.display = 'flex';
-                            });
+                             });
 
-                            //  recipeDisplay.style.display = 'none';
+                           });
 
-                            // recipeDisplay.style.display = 'flex';
-                        });
+
 
                         mealCard.addEventListener('click', function(e) {
                             const fetchRecipe = fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${item.idMeal}`);
@@ -154,6 +154,3 @@ const popolateCountries = ()  =>{
 }
 popolateCountries();
 
-// function getMealsByCountry(country) {
-
-// }
