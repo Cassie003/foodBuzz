@@ -3,12 +3,13 @@
 
 
 *{
-    /* margin:0;
+     margin:0;
     padding:0;
-    box-sizing: border-box; */
-    font-family: 'Montserrat',sans-serif ;
+    box-sizing:border-box; 
+    font-family:'Montserrat',sans-serif ;
+    scroll-behavior:smooth;
+    cursor:pointer;
 }
-
 body{
     justify-content:center;
     background-color:beige;
@@ -21,12 +22,11 @@ body{
     flex-direction:column;
     align-items:center;
     margin:20px;
-    /* text-align:center; */
 }
 h1{
-     font-size:2.5rem;
      text-align:left;
-     line-height: 1.2;   
+     line-height: 1.2;  
+     padding:8px;   
 }
 .title-block{
     display:flex;
@@ -56,19 +56,18 @@ h1{
     flex-wrap: wrap;
     padding:8px 8px;
 }
-
 .meal-card-info img{
     width: 280px;
     height: 150px;
-    padding:8px;
-   
+    padding:4px;
+    box-shadow:3px 4px #EEDEC5; 
 }
 .meal-card-info{
-position:relative;
-text-align:left;
-padding:25px 20px 20px;
-display:flex;
-flex-direction:column;
+    position:relative;
+    text-align:left;
+    padding:25px 20px 20px;
+    display:flex;
+    flex-direction:column;
 }
 .meal-name{ 
     padding:16px;
@@ -84,36 +83,33 @@ h3{
     flex-basis:50%;
 
 }
-
-/* Styles for the select country section */
 .select-country {
     text-align: center;
     margin-bottom: 20px;
 }
-
-/* Styles for the card container */
 .card {
     border: 1px solid #ccc;
     padding: 20px;
     width: 80%;
-    /* max-width: 600px; */
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     background-color: #fff;
 }
 .pageLayout{
-    border: 1px solid;
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
 }
 
 #recipe img{
     width:270px;
     height:270px;
+    box-shadow:4px 6px #EEDEC5; 
 }
 .instructions{
-    /* border:1px solid; */
     font-size:medium;
+    block-size:auto;
+  
 }
-
 .material-symbols-outlined{
     cursor:pointer;
 }

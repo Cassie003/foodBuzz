@@ -30,12 +30,12 @@ const popolateCountries = ()  =>{
                     meals.meals.forEach((item) =>{
                         const mealCard = document.createElement('div');
                         mealObj = `<div class = "meal-card"> 
-                        <div class = "meal-card-info">
-                            <img src= '${item.strMealThumb}' /> 
-                            <div class="meal-name">${item.strMeal}</div>
-                        </div>
+                                        <div class = "meal-card-info">
+                                            <img src= '${item.strMealThumb}' /> 
+                                            <div class="meal-name">${item.strMeal}</div>
+                                        </div>
                                     
-                                </div>`;
+                                  </div>`;
 
                         mealCard.innerHTML = mealObj;
 
@@ -43,7 +43,7 @@ const popolateCountries = ()  =>{
                             mealDisplay.style.display = 'flex';
                             recipeDisplay.style.display = 'none';
 
-                           counrtiesDisplay.addEventListener('click', function(){
+                            counrtiesDisplay.addEventListener('click', function(){
                             mealDisplay.style.display = 'flex';
                            });
 
@@ -59,7 +59,11 @@ const popolateCountries = ()  =>{
                              });
 
                            });
+                           
 
+                            // counrtiesDisplay.addEventListener('click', function(){
+                            //     mealDisplay.style.display = "flex";
+                            // });
 
 
                         mealCard.addEventListener('click', function(e) {
@@ -71,9 +75,12 @@ const popolateCountries = ()  =>{
                                 console.log(response);
                                 
                                 arrowBack.addEventListener('click',function(e){
-                                    mealCard.style.display = 'flex'; 
+                                    mealCard.style.display ='flex';
+                                    mealDisplay.style.display ='none'; 
 
                                 });
+
+
                                 let ingredientArr = [];
                                 let measureArr = [];
                                 response.meals.forEach((item) => {
@@ -88,8 +95,6 @@ const popolateCountries = ()  =>{
 
                                     }
 
-                                    
-
                                     const mealInstructions = item.strInstructions.split('. ');
 
                                     let instructionObj = '';
@@ -102,18 +107,16 @@ const popolateCountries = ()  =>{
                                     let ingredientObj ='';
                                     ingredientArr.forEach ((item) => {
                                         ingredientObj +=`
-                                        <div class = "ingredient"> ${item}</div>
+                                        <div class = "ingredient">${item}</div>
                                         `;
 
                                     });
                                     let measureObj = '';
                                     measureArr.forEach((item) =>{
                                      measureObj +=`
-                                     <div class = "measurements"> ${item}</div>
+                                     <div class = "measurements">${item}</div>
                                      `;
-
-                                     
-                                    })
+                                    });
 
                                     let pageLayout =`
                                     <div> 
@@ -128,19 +131,17 @@ const popolateCountries = ()  =>{
 
                                     </div>
                                     `
-                                    
                                     recipeDisplay.innerHTML = pageLayout;
 
                                 });
 
-
                                 mealDisplay.style.display = 'none';
+
                             });
                         });
                         mealDisplay.appendChild(mealCard);
                     
                         counrtiesDisplay.style.display = 'none';
-
 
                     });
                 });
